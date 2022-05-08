@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+/* font-family: 'Raleway', sans-serif; */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    background-image: url(../images/bg-desktop.png);
+
+
+    background-repeat: no-repeat;
+    background-color: hsl(228, 56%, 26%);
+}
+
+main {
+    display: flex;
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    color: hsl(243, 100%, 93%);
+    margin-top: 10vh;
+}
+
+.left {
+    background-color: hsl(228, 56%, 26%);
+    margin-top: 3rem;
+    border-radius: 10px 85px 10px 10px;
+    width: 20rem;
+}
+
+.logo {
+    padding: 2rem 0 0 2rem;
+}
+
+.grid {
+    display: flex;
+    padding: 1rem;
+}
+
+.fld {
+    background-color: hsl(229, 57%, 11%);
+    margin: 1rem;
+    height: 2.5rem;
+    border-radius: 5px;
+
+}
+
+
+.fld img {
+    padding: 0.5rem;
+}
+
+/* --------------- */
+.right {
+    background-color: hsl(228, 56%, 26%);
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center; */
+    margin-top: 3rem;
+    margin: 3rem;
+    height: fit-content;
+    text-align: left;
+    border-radius: 10px;
+}
+
+.right p {
+    padding: 1rem 1rem 0 2rem;
+}
+
+.last {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 0.5rem 2rem 2rem 0rem;
+}
+
+.div {
+    background-color: hsl(229, 57%, 11%);
+    width: 20rem;
+    height: 1rem;
+    border-radius: 25px;
+    margin: 2rem 2rem 0.5rem 2rem;
+}
+
+.grad {
+    height: 100%;
+    background-image: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    border-radius: 25px;
+    width: 70%
+}
+
+.ball {
+    height: 100%;
+    background-image: linear-gradient(to right, hsl(0, 0%, 100%), hsl(0, 0%, 100%));
+    border-radius: 50%;
+    width: 1rem;
+    /* display: flex;
+    justify-content:last baseline;
+    align-items: flex-end; */
+    margin-left: 93%;
+}
+
+/* -------------- */
+.bubble {
+    position: relative;
+    padding: 15px;
+    margin-top: -16rem;
+    margin-left: 15rem;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    width: 8rem;
+    height: fit-content;
+    color: #000;
+    background: #ffffff;
+    border-radius: 15px 15px 0 15px;
+    border-color: white;
+    /* background: linear-gradient(top, #ffffff, #ffffff); */
+    text-align: center;
+
+}
+
+/* creates triangle */
+.bubble:after {
+    content: "";
+    display: block;
+    /* reduce the damage in FF3.0 */
+    position: absolute;
+    bottom: -13px;
+    left: 137.5px;
+    width: 0;
+    border-width: 25px 8px 0 8px;
+    border-style: solid;
+    border-color: #ffffff transparent;
+    -ms-transform: rotate(35deg);
+    /* IE 9 */
+    -webkit-transform: rotate(35deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(90deg);
+}
+
+
+a {
+    text-decoration: none;
+    font-weight: 700;
+
+}
+
+.bubble a {
+    color: black;
+}
+
+.bubble p {
+    font-size: 20px;
+    color: hsl(243, 100%, 93%);
+
+}
+
+.right a {
+    color: white;
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+}
+
+/* -------------------------------- */
+@media (max-width: 375px) {
+    body {
+        background-image: url(../images/bg-mobile.png);
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        /* padding: 1rem; */
+    }
+
+    .div {
+        width: 18rem;
+    }
+
+    .bubble {
+        margin: 0;
+    }
+
+    .right {
+        margin: 1rem 0;
+        width: 100%;
+    }
+
+    .bubble:after {
+        display: none;
+    }
+
+    .bubble {
+
+        border-radius: 20px;
+        margin-top: -2.5rem;
+    }
+
+    .data {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
